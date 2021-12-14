@@ -1,0 +1,39 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> {% endcomment %}
+  <title>{% if page.title %}{{ page.title }} // {% endif %}{{ site.title }}</title>
+  <link rel="apple-touch-icon-precomposed" href="assets/favicon-152.png">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} // {% endif %}{{ site.title }}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} // {% endif %}{{ site.title }}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:card" content="{% if page.layout == "default" %}summary{% else %}summary_large_image{% endif %}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:site" content="@keelinj">
+  <meta property="og:site_name" content="Keel.in Design + Code">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','/' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="fb:admins" content="1440948636" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="twitter:image" content="{{ site.url }}{% if page.layout == "default" %}/assets/logo.png{% else %}/assets/{{ page.title | prepend: site.root | slugify }}/thumbnail-1200.jpg{% endif %}">
+  <meta property="og:image" content="{{ site.url }}{% if page.layout == "default" %}/assets/logo.png{% else %}/assets/{{ page.title | prepend: site.root | slugify }}/thumbnail-1200.jpg{% endif %}">
+  <link rel="stylesheet" href="{{ "/css/normalize.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <!--[if lt IE 11]>
+  <link rel="stylesheet" href="{{ "/css/ie9.css" | prepend: site.baseurl }}" type="text/css">
+  <![endif]-->
+  <script src="/js/modernizr-custom.js"></script>
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'tkg5wfd',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+  </script>
+</head>

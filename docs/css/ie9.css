@@ -1,0 +1,7 @@
+.site-nav, .page-content, footer, body {
+	opacity: 1;
+}
+.ie_alert {
+	color: red;
+	font-size: 48px;
+}
