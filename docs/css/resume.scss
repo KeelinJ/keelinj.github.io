@@ -134,11 +134,11 @@ article p {
 }
 .right {
   text-align: right;
-  align-self: flex-end;
   white-space: nowrap;
 }
 .skills {
   grid-area: side;
+  margin-bottom: 0;
 }
 .experience {
   grid-area: main;
@@ -156,7 +156,11 @@ article p {
 }*/
 @media screen and (max-width: 800px) {
   main {
-    display: block;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "side"
+      "main"
+      "education";
   }
   article,
   section {
