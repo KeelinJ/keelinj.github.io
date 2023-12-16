@@ -191,6 +191,8 @@ article p {
   }
   .logo_wrapper {
     width: 100%;
+    display: block;
+    margin-bottom: 16px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -205,10 +207,6 @@ article p {
   article p {
     padding-left: 25px;
     font-size: 16px;
-    line-height: 17px;
-  }
-  article:not(.freelance) p:first-of-type {
-    margin-top: 16px;
   }
 }
 @media print {
