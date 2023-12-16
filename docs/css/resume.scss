@@ -29,6 +29,7 @@ body {
 main {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-areas: "side main";
   gap: 40px;
 }
 svg.logo {
@@ -133,14 +134,12 @@ article p {
   align-self: flex-end;
   white-space: nowrap;
 }
+.skills {
+  grid-area: side;
+}
 .experience,
 .education {
-  float: right;
-  width: 65%;
-}
-.skills {
-  float: left;
-  width: 31%;
+  grid-area: main;
 }
 .skills p {
   padding: 0;
@@ -150,13 +149,8 @@ article p {
   margin: 10px 0 25px;
 }*/
 @media screen and (max-width: 800px) {
-  .experience,
-  .education {
-    float: none;
-    width: 100%;
-  }
-  .skills {
-    width: 100%;
+  main {
+    display: block;
   }
   article,
   section {
