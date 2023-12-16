@@ -29,8 +29,11 @@ body {
 main {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: "side main";
-  gap: 40px;
+  grid-template-areas:
+    "side main"
+    "side education";
+  column-gap: 40px;
+  row-gap: 64px;
 }
 svg.logo {
   fill: #bdbbbb;
@@ -137,9 +140,12 @@ article p {
 .skills {
   grid-area: side;
 }
-.experience,
-.education {
+.experience {
   grid-area: main;
+  margin-bottom: 0;
+}
+.education {
+  grid-area: education;
 }
 .skills p {
   padding: 0;
