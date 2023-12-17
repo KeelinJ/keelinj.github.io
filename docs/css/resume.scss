@@ -223,19 +223,15 @@ article p {
   }
   *,
   a {
-    color: darken(#8a8888, 10%);
     -webkit-print-color-adjust: exact;
   }
   svg.logo {
-    //fill: #8a8888;
     fill: #808080;
   }
   .resume {
     padding: 22pt 22pt 0;
     max-width: none;
-  }
-  header {
-    margin-bottom: 30pt;
+    row-gap: 48px;
   }
   article,
   section {
