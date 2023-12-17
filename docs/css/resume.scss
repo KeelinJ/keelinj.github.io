@@ -194,6 +194,10 @@ article p {
   header {
     grid-template-areas: "logo" "contact";
     grid-row: span 2;
+    grid-column: auto;
+  }
+  main {
+    grid-column: auto;
   }
   .logo_wrapper {
     width: 100%;
