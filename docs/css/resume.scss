@@ -31,7 +31,7 @@ main {
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
   grid-column: span 2;
-  grid-rows: span 2;
+  grid-row: span 2;
 }
 svg.logo {
   fill: #808080;
@@ -51,6 +51,7 @@ a:focus {
   max-width: 800px;
   padding: 50px;
   margin: auto;
+  display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
     "logo contact"
