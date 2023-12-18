@@ -138,7 +138,6 @@ article p {
 .wrapper {
   display: flex;
   align-items: baseline;
-  @extend %clearfix;
 }
 .wrapper h3 {
   margin: 0;
@@ -165,15 +164,13 @@ article p {
   padding: 0;
   margin-top: 0;
 }
-/*.freelance p {
-  margin: 10px 0 25px;
-}*/
 @media screen and (max-width: 800px) {
   .resume {
     grid-template-areas: "logo contact" "side side" "main main" "education education";
   }
   main {
-    grid-row: span 3;
+    display: flex;
+    flex-direction: column;
   }
   article,
   section {
@@ -182,8 +179,10 @@ article p {
 }
 @media screen and (max-width: 600px) {
   .resume {
-    grid-template-columns: 1fr 1fr;
     padding: 30px;
+  }
+  header {
+    grid-template-columns: 1fr 1fr;
   }
   .skills article {
     margin-bottom: 30px;
@@ -199,9 +198,7 @@ article p {
     grid-template-areas: "logo" "contact" "side" "main" "education";
   }
   header {
-    grid-template-areas: "logo" "contact";
-    grid-row: span 2;
-    grid-column: auto;
+    display: block;
   }
   main {
     grid-column: auto;
