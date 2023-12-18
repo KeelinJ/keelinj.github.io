@@ -53,10 +53,11 @@ a:focus {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto 1fr;
   grid-template-areas:
     "logo contact"
     "side main"
-    "side education";
+    "education main";
   column-gap: 40px;
   row-gap: 64px;
 }
