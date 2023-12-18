@@ -51,6 +51,9 @@ a:focus {
   max-width: 800px;
   padding: 50px;
   margin: auto;
+}
+header,
+main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto auto 1fr;
@@ -62,9 +65,12 @@ a:focus {
   row-gap: 64px;
 }
 header {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-column: span 2;
+  grid-template-areas: "logo contact";
+  margin-bottom: 64px;
+}
+main {
+  grid-template-areas: "side main" "education main";
+  grid-template-rows: auto 1fr;
 }
 .logo_wrapper {
   grid-area: logo;
