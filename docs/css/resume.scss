@@ -129,10 +129,13 @@ section {
 article:last-of-type {
   margin: 0;
 }
-article p {
-  padding-left: 25px;
+article p,
+article li {
   font-size: 17px;
   line-height: 1.4;
+}
+article p {
+  padding-left: 25px;
 }
 .wrapper {
   display: flex;
@@ -215,9 +218,12 @@ article p {
   h5 {
     font-size: 15px;
   }
+  article p,
+  article li {
+    font-size: 16px;
+  }
   article p {
     padding-left: 25px;
-    font-size: 16px;
   }
 }
 @media print {
@@ -248,9 +254,12 @@ article p {
   .education p:first-of-type {
     margin-top: 6pt;
   }
-  article p {
+  article p,
+  article li {
     font-size: 8pt;
     line-height: 10pt;
+  }
+  article p {
     padding-left: 15pt;
   }
   .contact p {
@@ -284,7 +293,8 @@ article p {
   section {
     margin-bottom: 19pt;
   }
-  article p {
+  article p,
+  article li {
     font-size: 9pt;
     line-height: 11pt;
   }
@@ -325,7 +335,8 @@ article p {
   section {
     margin-bottom: 15pt;
   }
-  article p {
+  article p,
+  article li {
     line-height: 10.5pt;
   }
   .freelance p {
