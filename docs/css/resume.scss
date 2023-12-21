@@ -164,6 +164,8 @@ article p {
 }
 .addendum {
   grid-column: span 2;
+  max-width: 43em;
+  margin: auto;
 }
 :where(.addendum) li {
   margin-bottom: 1em;
