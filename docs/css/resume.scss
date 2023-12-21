@@ -162,6 +162,16 @@ article p {
   padding: 0;
   margin-top: 0;
 }
+.addendum {
+  grid-column: span 2;
+}
+:where(.addendum) li {
+  margin-bottom: 1em;
+}
+:where(.addendum ul) ul {
+  margin: 1em 0;
+}
+
 @media screen and (max-width: 800px) {
   .resume {
     grid-template-areas: "logo contact" "side side" "main main" "education education";
